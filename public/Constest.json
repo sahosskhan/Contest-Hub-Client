@@ -1,0 +1,51 @@
+[
+    {
+        "ContestName": "Startup Innovators Challenge",
+        "ContestImage": "startup_challenge.jpg",
+        "ContestDescription": "Present your groundbreaking startup idea and business model.",
+        "ContestPrice": "Mentorship from Industry Leaders",
+        "PrizeMoney": "$15,000",
+        "TaskSubmission": "Submit a comprehensive business proposal and a 5-minute pitch video.",
+        "ContestTags": ["Business"],
+        "ParticipationCount": 60,
+        "ContestDeadline": "2023-03-15"
+      },
+      {
+        "ContestName": "Corporate Sustainability Award",
+        "ContestImage": "sustainability_award.jpg",
+        "ContestDescription": "Showcase your company's commitment to sustainable practices.",
+        "ContestPrice": "Feature in Sustainable Business Magazine",
+        "PrizeMoney": "$20,000",
+        "TaskSubmission": "Submit evidence of sustainable initiatives and a sustainability report.",
+        "ContestTags": ["Business"],
+        "ParticipationCount": 45,
+        "ContestDeadline": "2023-04-20"
+      },
+      {
+        "ContestName": "Financial Tech Hackathon",
+        "ContestImage": "fintech_hackathon.jpg",
+        "ContestDescription": "Develop innovative solutions in the field of financial technology.",
+        "ContestPrice": "Internship Opportunities with FinTech Giants",
+        "PrizeMoney": "$18,000",
+        "TaskSubmission": "Submit a working prototype and a technical documentation.",
+        "ContestTags": ["Business"],
+        "ParticipationCount": 55,
+        "ContestDeadline": "2023-05-05"
+      },
+      {
+        "ContestName": "Retail Innovation Challenge",
+        "ContestImage": "retail_innovation.jpg",
+        "ContestDescription": "Propose creative solutions to enhance the retail experience.",
+        "ContestPrice": "Collaboration with Leading Retail Brands",
+        "PrizeMoney": "$12,000",
+        "TaskSubmission": "Submit a concept presentation and a prototype if applicable.",
+        "ContestTags": ["Business"],
+        "ParticipationCount": 70,
+        "ContestDeadline": "2023-06-01"
+      }
+      
+      
+      
+      
+      
+]

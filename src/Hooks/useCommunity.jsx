@@ -2,11 +2,11 @@ import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "./useAxiosPublic";
 
 const useCommunity = () => {
-const axiosSecure = useAxiosPublic();
+const axiosPublic = useAxiosPublic();
 const { data: upload = [] } = useQuery({
     queryKey: ['upload'],
     queryFn: async() => {
-        const res = await axiosSecure.get('/community-post');
+        const res = await axiosPublic.get('/community-post');
         return res.data;
         
     }

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 // import { useContext } from "react";
 // import { AuthContext } from "../Provider/AuthProvider";
 import useAuth from "../Hooks/useAuth";
-
+import DashboardIcon from '@mui/icons-material/Dashboard';
 
 const Navbar = () => {
 const {user,logOut} = useAuth();
@@ -27,17 +27,21 @@ const EndMenu =  <>
         </div>
       </label>
       <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-        <li>
-          <a className="justify-between">
-            {user?.displayName}
+        <li className="mt-2">  
+          <a className="">
+          <div className="avatar online">
+  <div className="w-7 rounded-full">
+    <img src={user?.photoURL}  />
+  </div>
+</div>{user?.displayName}
           </a>
         </li>
-        <li><a>Dashboard</a></li>
-        <li onClick={handleLogOut} className="btn btn-xs bg-red-500 py-4 w-1/2"><a>Logout</a></li>
+  <NavLink to='/dashboard'><li className="mt-2 hover:bg-red-200 "><a> <DashboardIcon/> Dashboard</a></li></NavLink>
+        <li onClick={handleLogOut} className="btn mt-3 ml-3 btn-xs  bg-red-500 py-4 w-[70%]"><a>Logout</a></li>
       </ul>
     </div>) 
 :(
-<NavLink to='login'><Button variant="outlined" color="error">Login</Button></NavLink>
+<NavLink to='login'><Button variant="outlined"  color="error"> Login</Button></NavLink>
 )}
 
 

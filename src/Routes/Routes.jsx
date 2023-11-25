@@ -8,6 +8,8 @@ import Community from "../Page/Community";
 import AddPost from "../Component/Community/AddPost";
 import PrivateRoute from './PrivateRoutes';
 import Visualization from "../Page/Visualization";
+import DashboardLayout from "../Layout/DashboardLayout";
+import ManageUser from "../Page/Dashboard/ManageUser";
 
 
 
@@ -35,6 +37,16 @@ import Visualization from "../Page/Visualization";
         },
   
       ]
+    },
+    {
+      path: "/dashboard",
+            element: <DashboardLayout/>,
+            children:[
+              {
+                path: "/dashboard/manage-user",
+                      element: <ManageUser/>,
+              },
+            ],
     },
     {
       path: "/login",

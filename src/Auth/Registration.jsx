@@ -3,8 +3,12 @@ import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
+import Googlebtn from "../Shared/Googlebtn";
+import useAxiosPublic from "../Hooks/useAxiosPublic";
+
 
 const Registration = () => {
+  const axiosPublic = useAxiosPublic();
   const navigate = useNavigate();
   const { createUser, updateUserProfile } = useContext(AuthContext);
   const {
@@ -20,19 +24,29 @@ const Registration = () => {
       console.log(loggedUser);
       updateUserProfile(data.name, data.photoURL)
         .then(() => {
-          console.log("user profile info updated");
-          reset();
-          Swal.fire({
-            title: "Wow!",
-            text: "Sign Up Successfully",
-            icon: "success",
-            confirmButtonText: "Okay",
-          });
-          navigate("/");
+          const userInfo = {
+            name: data.name,
+            email: data.email,
+            image: data.photoURL,
+          };
+          console.log(userInfo);
+          axiosPublic.post("/users", userInfo).then((res) => {
+            if (res.data.insertedId) {
+              console.log("user created successfully");
+              reset();
+              Swal.fire({
+                title: "Wow!",
+                text: "Sign Up Successfully",
+                icon: "success",
+                confirmButtonText: "Okay",
+              });
+              navigate("/");
+            }
         })
         .catch((error) => console.log(error));
     });
-  };
+  });
+}
   return (
     <div>
       <div className="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
@@ -118,8 +132,11 @@ const Registration = () => {
               Register
             </button>
           </div>
+          
         </form>
 
+       
+        <Googlebtn/>
         <Link to="/login">
           <p className="mt-4 text-lg text-center font-light  text-gray-600">
             {" "}

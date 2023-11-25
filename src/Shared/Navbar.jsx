@@ -1,12 +1,12 @@
 import { Button } from "@mui/material";
-import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { AuthContext } from "../Provider/AuthProvider";
+// import { useContext } from "react";
+// import { AuthContext } from "../Provider/AuthProvider";
+import useAuth from "../Hooks/useAuth";
 
 
 const Navbar = () => {
-const {user,  logOut} = useContext(AuthContext);
-console.log(user?.photoURL);
+const {user,logOut} = useAuth();
 const handleLogOut = () => {
   logOut()
   .then(() =>{})
@@ -15,13 +15,13 @@ const handleLogOut = () => {
   const nav = <>
       <NavLink to="/"> <li className="lg:text-lg lg:font-bold font-semibold hover:text-red-600 uppercase text-white"> <a >Home</a></li></NavLink> 
       <NavLink to="/"> <li className="lg:text-lg lg:font-bold font-semibold hover:text-red-600 uppercase text-white"> <a >Contest</a></li></NavLink> 
-   <NavLink to="/"> <li className="lg:text-lg lg:font-bold font-semibold hover:text-red-600 uppercase text-white"> <a>Timeline</a></li></NavLink> 
-   <NavLink to="/"> <li className="lg:text-lg lg:font-bold font-semibold hover:text-red-600 uppercase text-white"> <a>Community</a></li></NavLink> 
+   <NavLink to="/visualization"> <li className="lg:text-lg lg:font-bold font-semibold hover:text-red-600 uppercase text-white"> <a>Visualization</a></li></NavLink> 
+   <NavLink to="/community"> <li className="lg:text-lg lg:font-bold font-semibold hover:text-red-600 uppercase text-white"> <a>Community</a></li></NavLink> 
   </>
 
 const EndMenu =  <>
 {user?(<div className="dropdown dropdown-end">
-      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+      <label tabIndex={0} className="btn btn-ghost btn-circle avatar online">
         <div className="w-10 rounded-full">
           <img alt="Tailwind CSS Navbar component" src={user?.photoURL} />
         </div>

@@ -4,6 +4,10 @@ import Home from "../Page/Home";
 import Root from "../Layout/Root";
 import Login from "../Auth/Login";
 import Registration from "../Auth/Registration";
+import Community from "../Page/Community";
+import AddPost from "../Component/Community/AddPost";
+import PrivateRoute from './PrivateRoutes';
+import Visualization from "../Page/Visualization";
 
 
 
@@ -16,6 +20,18 @@ import Registration from "../Auth/Registration";
         {
             path: "/",
             element: <Home/>,
+        },
+        {
+            path: "/visualization",
+            element: <Visualization/>,
+        },
+        {
+            path: "/community",
+            element: <PrivateRoute> <Community/></PrivateRoute>,
+        },
+        {
+            path: "/addpost",
+            element: <PrivateRoute> <AddPost/></PrivateRoute>,
         },
   
       ]

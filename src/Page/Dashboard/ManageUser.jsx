@@ -1,8 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
-import { AdminPanelSettings } from "@mui/icons-material";
 
 const ManageUser = () => {
   const axiosSecure = useAxiosSecure();
@@ -31,6 +29,39 @@ const ManageUser = () => {
       }
     });
   };
+
+  const MakeCreator = (user) => {
+    axiosSecure.patch(`/users/creator/${user._id}`).then((res) => {
+      console.log(res.data);
+      if (res.data.modifiedCount > 0) {
+        refetch();
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: `${user.name} is now creator`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+    });
+  };
+
+  const MakeUser = (user) => {
+    axiosSecure.patch(`/users/user/${user._id}`).then((res) => {
+      console.log(res.data);
+      if (res.data.modifiedCount > 0) {
+        refetch();
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: `${user.name} is now creator`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+    });
+  };
+
   return (
     <div>
       <div className="flex justify-evenly my-5">
@@ -63,17 +94,56 @@ const ManageUser = () => {
                   <td>{user.name}</td>
                   <td>{user.email}</td>
                   <td>
-                    {user.role === "admin" ? (
+                    {user.role === "admin" && (
                       "Admin"
-                    ) : (
-                      <button
-                        onClick={() => MakeAdmin(user)}
-                        className="btn btn-sm bg-red-300"
-                      >
-                        <AdminPanelSettings className="text-white"></AdminPanelSettings>
-                      </button>
-                    )}
+                    ) 
+                    }
+                       {user.role === "user" && (
+                      "User"
+                    ) 
+                    }
+                     {user.role === "creator" && (
+                      "Creator"
+                    ) 
+                    }
+                   
+                    
                   </td>
+                  
+                  <td>
+{user.role === "admin"&&(   <button
+                        disabled
+                        className="w-36 btn btn-sm text-white bg-red-400"
+                      >
+                        Already Admin
+                      </button>)}
+                      {user.role === "user"&&(   <button
+                      onClick={() => MakeCreator(user)}
+                        className="w-36 btn btn-sm mr-3 text-white bg-red-400"
+                      >
+                        Make Creator
+                      </button>)}
+                      {user.role === "user"&&(   <button
+                       onClick={() => MakeAdmin(user)}
+                        className="w-28 btn btn-sm text-white bg-red-400"
+                      >
+                        Make Admin
+                      </button>)}
+{user.role ==="creator"&&( 
+<button  onClick={() => MakeAdmin(user)}
+                        className="w-28 btn btn-sm mr-3 text-white bg-red-400">
+                          Make Admin</button>)}
+
+
+                          {user.role ==="creator"&&( 
+<button  onClick={() => MakeUser(user)}
+                        className="w-28 btn btn-sm text-white bg-red-400">
+                          Make User</button>)}
+
+
+                  </td>
+
+
                 </tr>
               ))}
             </tbody>

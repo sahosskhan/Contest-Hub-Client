@@ -13,6 +13,7 @@ import ManageUser from "../Page/Dashboard/ManageUser";
 
 
 
+
   
   export const router = createBrowserRouter([
     {
@@ -44,7 +45,7 @@ import ManageUser from "../Page/Dashboard/ManageUser";
             children:[
               {
                 path: "/dashboard/manage-user",
-                      element: <ManageUser/>,
+                      element:  <ManageUser/> ,
               },
             ],
     },

@@ -31,11 +31,12 @@ const Community = () => {
      <Link to='/addpost'><Button variant="contained" color="error">Add Your Post</Button></Link>
 
      </div>
-      <div className="flex justify-center items-center flex-col mb-24">
+      <div className="flex justify-center items-center mx-6 flex-col mb-24">
         {upload?.map((items) => (
           <PostCard key={items} items={items}></PostCard>
         ))}
       </div>
+      
     </div>
   );
 };

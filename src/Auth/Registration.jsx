@@ -28,6 +28,7 @@ const Registration = () => {
             name: data.name,
             email: data.email,
             image: data.photoURL,
+            role: "user",
           };
           console.log(userInfo);
           axiosPublic.post("/users", userInfo).then((res) => {

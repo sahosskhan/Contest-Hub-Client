@@ -6,7 +6,6 @@ const ManageUser = () => {
   const axiosSecure = useAxiosSecure();
   const { data: users = [], refetch } = useQuery({
     queryKey: ["users"],
-
     queryFn: async () => {
       const res = await axiosSecure.get("/users");
       return res.data;
@@ -54,7 +53,7 @@ const ManageUser = () => {
         Swal.fire({
           position: "top-end",
           icon: "success",
-          title: `${user.name} is now creator`,
+          title: `${user.name} is now user`,
           showConfirmButton: false,
           timer: 1500,
         });
@@ -65,8 +64,7 @@ const ManageUser = () => {
   return (
     <div>
       <div className="flex justify-evenly my-5">
-        <h1 className="lg:text-5xl">All User</h1>
-        <h1 className="lg:text-5xl">Total User: {users.length}</h1>
+        <h1 className="lg:text-5xl font-semibold">Total User: {users.length}</h1>
       </div>
       <div>
         <div className="overflow-x-auto">

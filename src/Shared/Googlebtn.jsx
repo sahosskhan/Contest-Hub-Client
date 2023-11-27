@@ -3,6 +3,7 @@
 import { useNavigate } from 'react-router-dom';
 import useAxiosPublic from '../Hooks/useAxiosPublic';
 import useAuth from './../Hooks/useAuth';
+import Swal from 'sweetalert2';
 
 const Googlebtn = () => {
   const navigate = useNavigate();
@@ -17,6 +18,12 @@ const Googlebtn = () => {
       };
       axiosPublic.post("/users", userInfo).then((res) => {
         console.log(res.data);
+        Swal.fire({
+          title: "Successfully!",
+          text: "You login with google ",
+          icon: "success",
+          confirmButtonText: "Done",
+        });
         navigate("/");
       });
     });

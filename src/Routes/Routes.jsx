@@ -10,6 +10,16 @@ import PrivateRoute from './PrivateRoutes';
 import Visualization from "../Page/Visualization";
 import DashboardLayout from "../Layout/DashboardLayout";
 import ManageUser from "../Page/Dashboard/ManageUser";
+import AdminRoute from "./AdminRoute";
+import CreatorRoute from "./CreatorRoute";
+import AddContest from "../Page/Dashboard/Creator/AddContest";
+import MyContest from "../Page/Dashboard/Creator/MyContest";
+import ManageContest from "../Page/Dashboard/Admin/ManageContest";
+import Error from "../Page/Error";
+import UpdateContest from "../Page/Dashboard/Creator/UpdateContest";
+import AllContest from "../Page/AllContest/AllContest";
+import SingleContestPage from "../Page/AllContest/SingleContestPage";
+import SingleRegister from "../Page/AllContest/SingleRegister";
 
 
 
@@ -19,6 +29,7 @@ import ManageUser from "../Page/Dashboard/ManageUser";
     {
       path: "/",
       element: <Root/>,
+      errorElement: <Error/>,
       children:[
         {
             path: "/",
@@ -28,6 +39,28 @@ import ManageUser from "../Page/Dashboard/ManageUser";
             path: "/visualization",
             element: <Visualization/>,
         },
+        {
+          path: "/allContest",
+          element: <AllContest/>,
+      },
+        {
+          path: "/singleContest/:id",
+          element: <SingleContestPage/>,
+          loader: ({params}) =>
+          fetch(
+            `http://localhost:5000/addedContestUser/${params?.id}`
+          ),
+      },
+
+      {
+        path: "/singleRegister/:id",
+        element: <PrivateRoute><SingleRegister/></PrivateRoute> ,
+        loader: ({params}) =>
+        fetch(
+          `http://localhost:5000/addedContestUser/${params?.id}`
+        ),
+    },
+
         {
             path: "/community",
             element: <PrivateRoute> <Community/></PrivateRoute>,
@@ -45,7 +78,31 @@ import ManageUser from "../Page/Dashboard/ManageUser";
             children:[
               {
                 path: "/dashboard/manage-user",
-                      element:  <ManageUser/> ,
+                      element: <AdminRoute><ManageUser/></AdminRoute>  ,
+              },
+              {
+                path: "/dashboard/manage-contest",
+                      element: <AdminRoute><ManageContest/> </AdminRoute>  ,
+              },
+              {
+                path: "/dashboard/add-contest",
+                      element: <CreatorRoute> <AddContest/> </CreatorRoute> ,
+              },
+              {
+                path: "/dashboard/added-contest",
+                      element: <CreatorRoute> <MyContest/> </CreatorRoute> ,
+              },
+              {
+                path: "/dashboard/updateContest/:id",
+                      element: <CreatorRoute> <UpdateContest/> </CreatorRoute> ,
+                      loader: ({params}) =>
+        fetch(
+          `http://localhost:5000/contest-update/${params?.id}`
+        ),
+              },
+              {
+                path: "/dashboard/user-profile",
+                      element:  <MyContest/>  ,
               },
             ],
     },

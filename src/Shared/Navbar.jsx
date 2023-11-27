@@ -12,9 +12,11 @@ const handleLogOut = () => {
   .then(() =>{})
   .catch(error => console.log(error));
 }
+const nameUser = user?.displayName;
+const slicedText = nameUser?.slice(0, 16);
   const nav = <>
       <NavLink to="/"> <li className="lg:text-lg lg:font-bold font-semibold hover:text-red-600 uppercase text-white"> <a >Home</a></li></NavLink> 
-      <NavLink to="/"> <li className="lg:text-lg lg:font-bold font-semibold hover:text-red-600 uppercase text-white"> <a >Contest</a></li></NavLink> 
+      <NavLink to="/allContest"> <li className="lg:text-lg lg:font-bold font-semibold hover:text-red-600 uppercase text-white"> <a >Contest</a></li></NavLink> 
    <NavLink to="/visualization"> <li className="lg:text-lg lg:font-bold font-semibold hover:text-red-600 uppercase text-white"> <a>Visualization</a></li></NavLink> 
    <NavLink to="/community"> <li className="lg:text-lg lg:font-bold font-semibold hover:text-red-600 uppercase text-white"> <a>Community</a></li></NavLink> 
   </>
@@ -33,7 +35,7 @@ const EndMenu =  <>
   <div className="w-7 rounded-full">
     <img src={user?.photoURL}  />
   </div>
-</div>{user?.displayName}
+</div>{slicedText}
           </a>
         </li>
   <NavLink to='/dashboard'><li className="mt-2 hover:bg-red-200 "><a> <DashboardIcon/> Dashboard</a></li></NavLink>

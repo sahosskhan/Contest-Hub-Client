@@ -1,3 +1,4 @@
+
 import useAuth from "../../../Hooks/useAuth";
 import useSubmission from "../../../Hooks/useSubmission";
 import WinCard from "./WinCard";
@@ -18,6 +19,7 @@ const WinPage = () => {
 
     return (
         <div className="grid lg:grid-cols-2 gap-8 my-5">
+
      {filterWin?.map((items) => (
     <WinCard key={items} items={items}></WinCard>
   ))}

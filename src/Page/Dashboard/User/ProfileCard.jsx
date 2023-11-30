@@ -6,7 +6,7 @@ const ProfileCard = ({ items }) => {
   const { _id, image, name, email, role } = items;
   return (
     <div>
-      <div className="max-w-4xl mt-5 p-8 sm:flex sm:space-x-6 rounded-xl shadow-xl bg-red-100 dark:text-gray-100">
+      <div  className="max-w-4xl mt-5 p-8 sm:flex sm:space-x-6 rounded-xl shadow-xl bg-red-100 dark:text-gray-100">
         <div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
           <img
             src={image}

@@ -6,7 +6,7 @@ const WinCard = ({items}) => {
     const {nameContest, money, yourName, yourEmail, creatorName,   } =items;
     return (
         <div>
-          <section className="max-w-2xl rounded-box shadow-xl px-6 py-8 mx-auto bg-white/50 dark:bg-gray-900">
+          <section  className="max-w-2xl rounded-box shadow-xl px-6 py-8 mx-auto bg-white/50 dark:bg-gray-900">
     <header>
         <div className="flex gap-2">
             <img className="w-auto h-7 sm:h-8" src="https://i.ibb.co/sFTY2DJ/image.png" alt=""/>

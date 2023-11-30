@@ -56,6 +56,7 @@ const handleDelete = (id) => {
 
     return (
         <div>
+
                  <div className="overflow-x-visible">
           <table className="table ">
         

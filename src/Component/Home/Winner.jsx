@@ -6,7 +6,7 @@ const Winner = ({items}) => {
     // eslint-disable-next-line react/prop-types
     const {winnerName, winnerImage, nameContest}=items;
     return (
-        <div>
+        <div  data-aos="fade-up">
 
    
 

@@ -7,6 +7,7 @@ import Googlebtn from "../Shared/Googlebtn";
 import useAxiosPublic from "../Hooks/useAxiosPublic";
 
 
+
 const Registration = () => {
   const axiosPublic = useAxiosPublic();
   const navigate = useNavigate();

@@ -76,6 +76,7 @@ fetch(
     }
     return (
         <div className="w-full mt-2 max-w-4xl p-6 m-auto mx-auto bg-red-100 rounded-lg shadow-md dark:bg-gray-800">
+            
             <h1 className="text-center text-red-500 font-bold text-3xl">Add Your Contest Here!!!!!</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
      

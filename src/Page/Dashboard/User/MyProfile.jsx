@@ -4,6 +4,7 @@ import useSubmission from "../../../Hooks/useSubmission";
 import useUser from "../../../Hooks/userUser";
 import ProfileCard from "./ProfileCard";
 
+
 const MyProfile = () => {
     const {userList}= useUser();
     console.log(userList)
@@ -22,7 +23,8 @@ const MyProfile = () => {
   console.log(WValue);
     return (
     <>
-        <div className="flex justify-center items-center gap-20 ">
+
+        <div  className="flex justify-center items-center gap-20 ">
 
 {filterUserList?.map((items) => (
     <ProfileCard key={items} items={items}></ProfileCard>

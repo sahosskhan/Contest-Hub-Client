@@ -11,7 +11,7 @@ const ContestCard = ({item}) => {
     
     return (
         <div>
-           <div className="card lg:w-[490px] md:w-[490px]  h-[450px] my-3 bg-base-100 shadow-xl">
+           <div  className="card lg:w-[490px] md:w-[490px]  h-[450px] my-3 bg-base-100 shadow-xl">
             <figure><img src={imageContest} alt="Shoes" /></figure>
             <p className="absolute right-0 mr-4 mt-4 px-6 py-1 rounded-lg bg-slate-900 text-white">Participate: {pcount} </p>
             <div className="card-body flex flex-col items-center">

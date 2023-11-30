@@ -80,6 +80,7 @@ const {
 
     return (
         <div>
+          
                   <section className="w-full my-10 max-w-3xl p-6 m-auto mx-auto bg-red-100 rounded-lg shadow-md dark:bg-gray-800">
                     <h1 className="text-center text-red-600 text-4xl font-bold my-6">Upload  Your Post For Community</h1>
 

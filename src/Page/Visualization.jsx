@@ -9,6 +9,7 @@ const Visualization = () => {
 
     return (
         <div>
+          
                <h1 className="text-center text-5xl text-black mt-12 uppercase font-bold">
         Welcome to Our<span className="text-red-500"> Contest Hub </span>
         Visualization

@@ -12,6 +12,7 @@ const Payment = () => {
 const {nameContest, price,}= data;
   return (
     <div className=" flex  flex-col justify-center items-center m-5">
+      
       <h3 className="text-4xl text-center">
         Payment for <span className="text-bold  text-red-500">{nameContest}</span>
       </h3>

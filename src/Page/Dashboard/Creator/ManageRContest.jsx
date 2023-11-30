@@ -22,6 +22,7 @@ const ManageRContest = () => {
   
     return (
         <div>
+
                  <div className="overflow-x-visible">
           <table className="table ">
         

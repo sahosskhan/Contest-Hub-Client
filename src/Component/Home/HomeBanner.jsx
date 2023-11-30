@@ -48,7 +48,7 @@ const HomeBanner = () => {
     );
   }
   return (
-    <div>
+    <div >
       <div className="container px-6 py-16  mx-auto">
         <div className="items-center lg:flex ">
           <div className="w-full lg:w-1/2 ">
@@ -91,7 +91,7 @@ const HomeBanner = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-center w-full mt-6  lg:mt-0 lg:w-1/2">
+          <div  className="flex items-center justify-center w-full mt-6  lg:mt-0 lg:w-1/2">
             <img
               className="w-full h-full lg:max-w-3xl"
               src="https://i.ibb.co/FbLJSS0/Catalogue-pana-copy.png"

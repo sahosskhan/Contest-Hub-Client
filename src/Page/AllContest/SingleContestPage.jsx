@@ -80,6 +80,7 @@ const SingleContestPage = () => {
 
   return (
     <div>
+  
       <div className="card my-3  mx-auto lg:w-[700px] shadow-2xl">
         <h1 className="bg-red-500 absolute text-center p-2 w-36 text-black rounded-r-xl text-xl font-bold">
           Participate: {pcount}

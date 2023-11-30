@@ -6,6 +6,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import Googlebtn from "../Shared/Googlebtn";
 
 
+
 const Login = () => {
     const [error, setError] = useState("");
     const { signIn,  loading,} = useContext(AuthContext);

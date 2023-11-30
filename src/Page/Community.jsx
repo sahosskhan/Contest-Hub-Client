@@ -8,15 +8,7 @@ import useCommunity from "../Hooks/useCommunity";
 const Community = () => {
   const upload = useCommunity();
   console.log(upload);
-    // const [Upload, setUpload] = useState([]);
-    // useEffect(() => {
-    //     fetch(
-    //       `https://contest-hub-server-beige.vercel.app/community-post`
-    //     )
-    //       .then((res) => res.json())
-    //       .then((data) => setUpload(data));
-    //   }, [ ]);
-//  console.log(Upload);
+
 
   return (
     <div>

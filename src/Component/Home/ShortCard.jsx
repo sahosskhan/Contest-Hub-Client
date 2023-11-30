@@ -10,7 +10,7 @@ const ShortCard = ({items}) => {
   
     const descriptionSlice = descriptionMain.slice(0, 70);
     return (
-        <div>
+        <div  data-aos="fade-up">
              <div className="card lg:w-[400px] md:w-[490px]  h-[450px] my-3 bg-base-100 shadow-xl">
             <figure><img src={imageContest} alt="Shoes" /></figure>
             <p className="absolute right-0 mr-4 mt-4 px-6 py-1 rounded-lg bg-slate-900 text-white">Participate: {pcount} </p>

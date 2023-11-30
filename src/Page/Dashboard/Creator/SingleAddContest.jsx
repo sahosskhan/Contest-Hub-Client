@@ -7,10 +7,10 @@ const SingleAddContest = ({items, handleDelete}) => {
     return (
      <>
       <tbody>
-      <tr className="text-base">
+      <tr className="text-xl">
           <td>{nameContest}</td>
           <td>{tags}</td>
-          <td>{price} $</td>
+          <td>{price}</td>
           <td>{deadline}</td>
           <td>{creatorName}</td>
           <td>{status}</td>

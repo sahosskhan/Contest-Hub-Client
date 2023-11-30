@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
@@ -8,7 +8,7 @@ const SingleRegister = () => {
     const {user}=useAuth();
     const data = useLoaderData();
     const {_id, creatorName, creatorEmail,creatorImage, nameContest,price,money,imageContest,tags,deadline, submission, pcount} =data;
-
+    const navigate = useNavigate();
     const {
         register,
         handleSubmit,
@@ -21,12 +21,15 @@ const SingleRegister = () => {
         const yourImage = data.yourImage;
         const yourSubmission = data.yourSubmission;
         const id = _id;
+        const winingStatus="pending";
+        const paymentStatus="not paying"
         const ContestSubmitAdd =
-        {id,pcount, yourName, yourEmail, yourImage, yourSubmission, creatorName, creatorEmail,creatorImage,nameContest,price,money,imageContest,tags,deadline,} ;
+  
+        {id,pcount,winingStatus,paymentStatus, yourName, yourEmail, yourImage, yourSubmission, creatorName, creatorEmail,creatorImage,nameContest,price,money,imageContest,tags,deadline} ;
         console.log(ContestSubmitAdd); 
 
         fetch(
-            "http://localhost:5000/contestSubmission",
+            "https://contest-hub-server-beige.vercel.app/contestSubmission",
             {
               method: "POST",
               headers: {
@@ -40,10 +43,14 @@ const SingleRegister = () => {
               console.log(data);
               if (data.insertedId) {
                 Swal.fire({
-                  title: "Successfully!",
-                  text: "Your Submission Upload Done ",
+                  title: "Your Registration On Processing...",
+                  text: "Now Please Pay For Complete The Registration  ",
                   icon: "success",
-                  confirmButtonText: "Done",
+                  confirmButtonText: "Pay",
+                }).then((result) => {
+                  if (result.isConfirmed) { 
+                    navigate(`/paymentGateway/${data.insertedId}`); 
+                  }
                 });
               }
             });

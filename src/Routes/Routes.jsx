@@ -9,7 +9,7 @@ import AddPost from "../Component/Community/AddPost";
 import PrivateRoute from './PrivateRoutes';
 import Visualization from "../Page/Visualization";
 import DashboardLayout from "../Layout/DashboardLayout";
-import ManageUser from "../Page/Dashboard/ManageUser";
+import ManageUser from "../Page/Dashboard/Admin/ManageUser";
 import AdminRoute from "./AdminRoute";
 import CreatorRoute from "./CreatorRoute";
 import AddContest from "../Page/Dashboard/Creator/AddContest";
@@ -20,6 +20,14 @@ import UpdateContest from "../Page/Dashboard/Creator/UpdateContest";
 import AllContest from "../Page/AllContest/AllContest";
 import SingleContestPage from "../Page/AllContest/SingleContestPage";
 import SingleRegister from "../Page/AllContest/SingleRegister";
+import MyProfile from "../Page/Dashboard/User/MyProfile";
+
+import UpdateProfile from "../Page/Dashboard/User/UpdateProfile";
+import ManageRContest from "../Page/Dashboard/Creator/ManageRContest";
+import RegisteredContest from './../Page/Dashboard/User/RegisteredContest';
+import WinPage from './../Page/Dashboard/User/WinPage';
+import Payment from "../Page/AllContest/Payment";
+
 
 
 
@@ -48,7 +56,7 @@ import SingleRegister from "../Page/AllContest/SingleRegister";
           element: <SingleContestPage/>,
           loader: ({params}) =>
           fetch(
-            `http://localhost:5000/addedContestUser/${params?.id}`
+            `https://contest-hub-server-beige.vercel.app/addedContestUser/${params?.id}`
           ),
       },
 
@@ -57,7 +65,7 @@ import SingleRegister from "../Page/AllContest/SingleRegister";
         element: <PrivateRoute><SingleRegister/></PrivateRoute> ,
         loader: ({params}) =>
         fetch(
-          `http://localhost:5000/addedContestUser/${params?.id}`
+          `https://contest-hub-server-beige.vercel.app/addedContestUser/${params?.id}`
         ),
     },
 
@@ -69,6 +77,12 @@ import SingleRegister from "../Page/AllContest/SingleRegister";
             path: "/addpost",
             element: <PrivateRoute> <AddPost/></PrivateRoute>,
         },
+        {
+          path: "/paymentGateway/:id",
+          element: <PrivateRoute> <Payment/> </PrivateRoute>,
+          loader: ({ params }) =>
+          fetch(`https://contest-hub-server-beige.vercel.app/submited-contest/${params.id}`),
+      },
   
       ]
     },
@@ -93,16 +107,37 @@ import SingleRegister from "../Page/AllContest/SingleRegister";
                       element: <CreatorRoute> <MyContest/> </CreatorRoute> ,
               },
               {
+                path: "/dashboard/register-contest",
+                      element: <CreatorRoute> <ManageRContest/> </CreatorRoute> ,
+              },
+           
+              {
                 path: "/dashboard/updateContest/:id",
                       element: <CreatorRoute> <UpdateContest/> </CreatorRoute> ,
                       loader: ({params}) =>
         fetch(
-          `http://localhost:5000/contest-update/${params?.id}`
+          `https://contest-hub-server-beige.vercel.app/contest-update/${params?.id}`
         ),
               },
               {
-                path: "/dashboard/user-profile",
-                      element:  <MyContest/>  ,
+                path: "/dashboard/my-profile",
+                      element:  <MyProfile/>  ,
+              },
+              {
+                path: "/dashboard/my-profile-edit/:id",
+                      element:  <UpdateProfile/>  ,
+                      loader: ({params}) =>
+                      fetch(
+                        `https://contest-hub-server-beige.vercel.app/user-list-update/${params?.id}`
+                      )
+              },
+              {
+                path: "/dashboard/my-register-contest",
+                      element:  <RegisteredContest/>  ,
+              },
+              {
+                path: "/dashboard/my-wining-contest",
+                      element:  <WinPage/>  ,
               },
             ],
     },

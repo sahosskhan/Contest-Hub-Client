@@ -31,7 +31,7 @@ const handleDelete = (id) => {
   }).then((result) => {
     if (result.isConfirmed) {
       fetch(
-        `http://localhost:5000/contest-delete/${id}`,
+        `https://contest-hub-server-beige.vercel.app/contest-delete/${id}`,
         {
           method: "DELETE",
         }
@@ -57,10 +57,10 @@ const handleDelete = (id) => {
     return (
         <div>
                  <div className="overflow-x-visible">
-          <table className="table table-zebra ">
+          <table className="table ">
         
-<thead><tr className="text-base text-red-500">
-    <td>Name</td>
+<thead><tr className="text-xl text-red-500">
+    <td>Contest Name</td>
     <td>Tags</td>
     <td>Price</td>
     <td>Deadline</td>

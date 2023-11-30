@@ -1,8 +1,25 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Contest Hub
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Source Code:
+## [ Client Side Code](https://github.com/programming-hero-web-course1/b8a12-client-side-MuhammadSahossKhan)
+
+## [ Server Side Code](https://github.com/programming-hero-web-course1/b8a12-server-side-MuhammadSahossKhan)
+## Preview: 
+## [ Client Side Preview](https://contest-hub-bd.web.app/)
+
+## [ Server Side Preview](https://contest-hub-server-beige.vercel.app/)
+
+ # Admin Dashboard:
+## Email: contesthub.admin@contesthub.com
+## Password: CHadmin@359
+
+# Creator Dashboard:
+## Email: jhankarmahabub1@gmail.com
+## Password: Jhankar@123
+
+# User Dashboard:
+## Email: sahoss@gmail.com
+## Password: Sahoss@123

@@ -4,16 +4,21 @@ import { NavLink } from "react-router-dom";
 // import { AuthContext } from "../Provider/AuthProvider";
 import useAuth from "../Hooks/useAuth";
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import useUser from "../Hooks/userUser";
 
 const Navbar = () => {
 const {user,logOut} = useAuth();
+
+const{userList} =useUser();
+
+const FilteruserList = userList.filter(item => item.email === user?.email);
+const nameFilter = FilteruserList.map(user => user.name);
+const imageFilter = FilteruserList.map(user => user.image);
 const handleLogOut = () => {
   logOut()
   .then(() =>{})
   .catch(error => console.log(error));
 }
-const nameUser = user?.displayName;
-const slicedText = nameUser?.slice(0, 16);
   const nav = <>
       <NavLink to="/"> <li className="lg:text-lg lg:font-bold font-semibold hover:text-red-600 uppercase text-white"> <a >Home</a></li></NavLink> 
       <NavLink to="/allContest"> <li className="lg:text-lg lg:font-bold font-semibold hover:text-red-600 uppercase text-white"> <a >Contest</a></li></NavLink> 
@@ -25,7 +30,7 @@ const EndMenu =  <>
 {user?(<div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar online">
         <div className="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src={user?.photoURL} />
+          <img alt="Tailwind CSS Navbar component" src={imageFilter} />
         </div>
       </label>
       <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
@@ -33,9 +38,9 @@ const EndMenu =  <>
           <a className="">
           <div className="avatar online">
   <div className="w-7 rounded-full">
-    <img src={user?.photoURL}  />
+    <img src={imageFilter}  />
   </div>
-</div>{slicedText}
+</div>{nameFilter}
           </a>
         </li>
   <NavLink to='/dashboard'><li className="mt-2 hover:bg-red-200 "><a> <DashboardIcon/> Dashboard</a></li></NavLink>

@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import useAuth from "../../../Hooks/useAuth";
-import { useLoaderData} from "react-router-dom";
+import { useLoaderData, useNavigate} from "react-router-dom";
 import Swal from "sweetalert2";
 
 // import { useQuery } from "@tanstack/react-query";
@@ -11,7 +11,7 @@ import Swal from "sweetalert2";
 
 const UpdateContest = () => {
   
-
+const navigate = useNavigate()
     const {user}=useAuth();
 
   // console.log(data)
@@ -52,7 +52,7 @@ const ContestUpdate =
 {creatorName, creatorEmail,creatorImage,status,pcount, nameContest,price,money,imageContest,tags,deadline,description, submission };
 console.log(ContestUpdate);
 fetch(
-  `http://localhost:5000/updatedContest/${_id}`,
+  `https://contest-hub-server-beige.vercel.app/updatedContest/${_id}`,
   {
     method: "PUT",
     headers: {
@@ -70,6 +70,10 @@ fetch(
         text: "Update Contest Successfully",
         icon: "success",
         confirmButtonText: "Done",
+      }).then((result) => {
+        if (result.isConfirmed) { 
+          navigate('/dashboard/added-contest'); 
+        }
       });
     }
   });

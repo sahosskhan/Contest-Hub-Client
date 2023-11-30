@@ -1,51 +1,11 @@
 [
-    {
-        "ContestName": "Startup Innovators Challenge",
-        "ContestImage": "startup_challenge.jpg",
-        "ContestDescription": "Present your groundbreaking startup idea and business model.",
-        "ContestPrice": "Mentorship from Industry Leaders",
-        "PrizeMoney": "$15,000",
-        "TaskSubmission": "Submit a comprehensive business proposal and a 5-minute pitch video.",
-        "ContestTags": ["Business"],
-        "ParticipationCount": 60,
-        "ContestDeadline": "2023-03-15"
-      },
-      {
-        "ContestName": "Corporate Sustainability Award",
-        "ContestImage": "sustainability_award.jpg",
-        "ContestDescription": "Showcase your company's commitment to sustainable practices.",
-        "ContestPrice": "Feature in Sustainable Business Magazine",
-        "PrizeMoney": "$20,000",
-        "TaskSubmission": "Submit evidence of sustainable initiatives and a sustainability report.",
-        "ContestTags": ["Business"],
-        "ParticipationCount": 45,
-        "ContestDeadline": "2023-04-20"
-      },
-      {
-        "ContestName": "Financial Tech Hackathon",
-        "ContestImage": "fintech_hackathon.jpg",
-        "ContestDescription": "Develop innovative solutions in the field of financial technology.",
-        "ContestPrice": "Internship Opportunities with FinTech Giants",
-        "PrizeMoney": "$18,000",
-        "TaskSubmission": "Submit a working prototype and a technical documentation.",
-        "ContestTags": ["Business"],
-        "ParticipationCount": 55,
-        "ContestDeadline": "2023-05-05"
-      },
-      {
-        "ContestName": "Retail Innovation Challenge",
-        "ContestImage": "retail_innovation.jpg",
-        "ContestDescription": "Propose creative solutions to enhance the retail experience.",
-        "ContestPrice": "Collaboration with Leading Retail Brands",
-        "PrizeMoney": "$12,000",
-        "TaskSubmission": "Submit a concept presentation and a prototype if applicable.",
-        "ContestTags": ["Business"],
-        "ParticipationCount": 70,
-        "ContestDeadline": "2023-06-01"
-      }
-      
-      
-      
-      
+  {"_id":{"$oid":"6563840b277593d8dd60777c"},"creatorName":"Jhankar Mahabub","creatorEmail":"jhankarmahabub1@gmail.com","creatorImage":"https://i.ibb.co/dWd8J4K/APkr-FKa58g29yl-HPx-Ykt-QJRBJq-Q-S4z-4p-ZLV3qzm-Qw2k-Q-s900-c-k-c0x00ffffff-no-rj.jpg","status":"approved","nameContest":"MedTech Research Expo","price":"107","money":"60000","imageContest":"https://i.ibb.co/M9gwzKY/image.png","tags":"Medical","deadline":"2023-11-29","description":"Contribute to medical research by proposing new ideas or solutions. Implement advanced artificial intelligence (AI) algorithms to analyze vast datasets related to chemical compounds, genomics, and patient outcomes. These algorithms can identify potential drug candidates, predict their efficacy, and optimize drug formulations.","submission":"Submit a research paper or project related to medical advancements.","pcount":"3","winnerImage":"null","winnerName":"null","winingStatus":"pending"},
+  {"_id":{"$oid":"65638455277593d8dd60777d"},"creatorName":"Jhankar Mahabub","creatorEmail":"jhankarmahabub1@gmail.com","creatorImage":"https://i.ibb.co/dWd8J4K/APkr-FKa58g29yl-HPx-Ykt-QJRBJq-Q-S4z-4p-ZLV3qzm-Qw2k-Q-s900-c-k-c0x00ffffff-no-rj.jpg","status":"approved","nameContest":"WriteCraft Creative Challenge","price":"111","money":"10000","imageContest":"https://i.ibb.co/zXs9QPy/image.png","tags":"Writing","deadline":"2023-11-29","description":"Showcase your writing skills with a creative writing piece on a given theme. Like In the heart of the ancient forest, where the leaves whispered secrets and the air hummed with magic, a peculiar dance unfolded. It was not a dance of mortal feet on earthly soil, but a cosmic ballet between light and shadows.","submission":"Submit a short story or essay based on the provided theme.","pcount":"5","winingStatus":"pending","winnerName":"null","winnerImage":"null"},
+  {"_id":{"$oid":"656384a6277593d8dd60777e"},"creatorName":"Jhankar Mahabub","creatorEmail":"jhankarmahabub1@gmail.com","creatorImage":"https://i.ibb.co/dWd8J4K/APkr-FKa58g29yl-HPx-Ykt-QJRBJq-Q-S4z-4p-ZLV3qzm-Qw2k-Q-s900-c-k-c0x00ffffff-no-rj.jpg","status":"approved","nameContest":"EpicGamer Showdown","price":"200","money":"200000","imageContest":"https://i.ibb.co/3d3q6TR/image.png","tags":"Gaming","deadline":"2023-11-30","description":"Compete with gamers worldwide in an exciting gaming tournament. The battleground awaits, offering a variety of games to cater to every gamer's taste. From heart-pounding first-person shooters to strategic real-time strategy games, the diversity of the gaming arena mirrors the global tapestry of talent. ","submission":"Participate in the gaming tournament and achieve high scores.","pcount":"10","winingStatus":"pending","winnerImage":"null","winnerName":"null"},
+  {"_id":{"$oid":"656476c89c43624b0bf1a36c"},"creatorName":"Jhankar Mahabub","creatorEmail":"jhankarmahabub1@gmail.com","creatorImage":"https://i.ibb.co/dWd8J4K/APkr-FKa58g29yl-HPx-Ykt-QJRBJq-Q-S4z-4p-ZLV3qzm-Qw2k-Q-s900-c-k-c0x00ffffff-no-rj.jpg","status":"approved","pcount":"7","nameContest":"InnovateBiz Challenge","price":"160","money":"20000","imageContest":"https://i.ibb.co/ZVcXp4M/image.png","tags":"Business","deadline":"2023-11-29","description":"Solve a real-world business problem and propose innovative solutions. Implement an advanced recommendation system that analyzes customer preferences, purchase history, and browsing behavior. This system can offer personalized product recommendations, creating a more tailored shopping experience for each customer.","submission":"Submit a detailed business proposal with your solutions.","winingStatus":"pending","winnerName":"null","winnerImage":"null"},
+  {"_id":{"$oid":"6564859f9c43624b0bf1a36d"},"creatorName":"Jhankar Mahabub","creatorEmail":"jhankarmahabub1@gmail.com","creatorImage":"https://i.ibb.co/dWd8J4K/APkr-FKa58g29yl-HPx-Ykt-QJRBJq-Q-S4z-4p-ZLV3qzm-Qw2k-Q-s900-c-k-c0x00ffffff-no-rj.jpg","status":"approved","pcount":"9","nameContest":"PUBG Global Cup Contest","price":"199","money":"200000","imageContest":"https://i.ibb.co/1QTzn49/image.png","tags":"Gaming","deadline":"2023-12-01","description":"Compete with gamers worldwide in an exciting gaming tournament. The battleground awaits, offering a variety of games to cater to every gamer's taste. From heart-pounding first-person shooters to strategic real-time strategy games, the diversity of the gaming arena mirrors the global tapestry of talent. ","submission":"Participate in the PUBG Lan tournament and achieve high scores.","winingStatus":"pending","winnerName":"null","winnerImage":"null"},
+  {"_id":{"$oid":"656486099c43624b0bf1a36e"},"creatorName":"Jhankar Mahabub","creatorEmail":"jhankarmahabub1@gmail.com","creatorImage":"https://i.ibb.co/dWd8J4K/APkr-FKa58g29yl-HPx-Ykt-QJRBJq-Q-S4z-4p-ZLV3qzm-Qw2k-Q-s900-c-k-c0x00ffffff-no-rj.jpg","status":"approved","pcount":"11","nameContest":"FreeFire New Year Contest","price":"200","money":"600000","imageContest":"https://i.ibb.co/tMRxk3z/image.png","tags":"Gaming","deadline":"2023-12-01","description":"Compete with gamers worldwide in an exciting gaming tournament. The battleground awaits, offering a variety of games to cater to every gamer's taste. From heart-pounding first-person shooters to strategic real-time strategy games, the diversity of the gaming arena mirrors the global tapestry of talent. ","submission":"Participate in the Free Fire custom room and achieve high scores.","winingStatus":"pending","winnerName":"null","winnerImage":"null"},
+  {"_id":{"$oid":"656486429c43624b0bf1a36f"},"creatorName":"Jhankar Mahabub","creatorEmail":"jhankarmahabub1@gmail.com","creatorImage":"https://i.ibb.co/dWd8J4K/APkr-FKa58g29yl-HPx-Ykt-QJRBJq-Q-S4z-4p-ZLV3qzm-Qw2k-Q-s900-c-k-c0x00ffffff-no-rj.jpg","status":"approved","pcount":"6","nameContest":"Campus Writing Contes","price":"100","money":"5000","imageContest":"https://i.ibb.co/5W3GhSK/image.png","tags":"Writing","deadline":"2023-12-01","description":"Showcase your writing skills with a creative writing piece on a given theme. Like In the heart of the ancient forest, where the leaves whispered secrets and the air hummed with magic, a peculiar dance unfolded. It was not a dance of mortal feet on earthly soil, but a cosmic ballet between light and shadows.","submission":"Submit a short paragraph based on the current time.","winingStatus":"pending","winnerName":"null","winnerImage":"null"}
+
       
 ]

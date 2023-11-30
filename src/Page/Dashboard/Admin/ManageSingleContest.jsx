@@ -7,8 +7,8 @@ const ManageSingleContest = ({items, MakeApprove, handleDelete}) => {
 
     return (
         <>
-        <tbody>
-        <tr className="text-base ">
+       
+        <tr className="text-xl  ">
             <td>{nameContest}</td>
             <td>{tags}</td>
             <td >{price}</td>
@@ -23,7 +23,7 @@ const ManageSingleContest = ({items, MakeApprove, handleDelete}) => {
             </td>
             
           </tr>
-        </tbody>
+      
         </>
     );
 };

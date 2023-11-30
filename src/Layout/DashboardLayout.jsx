@@ -1,5 +1,4 @@
 import { NavLink, Outlet } from "react-router-dom";
-import useAuth from "../Hooks/useAuth";
 import useAdmin from "../Hooks/useAdmin";
 import useCreator from "../Hooks/useCreator";
 
@@ -7,23 +6,23 @@ const DashboardLayout = () => {
   const [isAdmin] = useAdmin();
   const [isCreator] = useCreator();
 
-  const { user } = useAuth();
-
-  const nameUser = user?.displayName;
-  const slicedText = nameUser?.slice(0, 16);
+  
 
   return (
     <div>
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content ">
-          <Outlet></Outlet>
-          <label
+        <div className="drawer-content  ">
+          
+       <div className="flex justify-center items-center">
+       <label
             htmlFor="my-drawer-2"
             className="btn my-5 btn-error drawer-button lg:hidden"
           >
             Open Dashboard
           </label>
+       </div>
+          <Outlet></Outlet>
         </div>
         <div className="drawer-side">
           <label
@@ -32,15 +31,6 @@ const DashboardLayout = () => {
             className="drawer-overlay"
           ></label>
           <ul className="menu p-4 w-72 min-h-full bg-red-400 text-lg text-white">
-            <li className="flex flex-row justify-center items-center  ">
-              <div className="avatar">
-                <div className="w-9 rounded-full">
-                  <img src={user?.photoURL} />
-                </div>
-              </div>
-
-              <span className=" text-xl">{slicedText}</span>
-            </li>
 
             <h1 className="text-center text-black text-xl font-semibold my-2">
               User Navigation
@@ -64,13 +54,13 @@ const DashboardLayout = () => {
             {isAdmin || isCreator || (
               <>
                 <li className="hover:bg-black rounded-lg">
-                  <NavLink to="/">Participated Contest</NavLink>
+                  <NavLink to="/dashboard/my-register-contest">Participated Contest</NavLink>
                 </li>
                 <li className="hover:bg-black rounded-lg">
-                  <NavLink to="/">Winning Contest</NavLink>
+                  <NavLink to="/dashboard/my-wining-contest">Winning Contest</NavLink>
                 </li>
                 <li className="hover:bg-black rounded-lg">
-                  <NavLink to="/">My Profile</NavLink>
+                  <NavLink to="/dashboard/my-profile">My Profile</NavLink>
                 </li>
               </>
             )}
@@ -86,7 +76,7 @@ const DashboardLayout = () => {
                   </NavLink>
                 </li>
                 <li className="hover:bg-black rounded-lg">
-                  <NavLink to="/">Submitted Contest</NavLink>
+                  <NavLink to="/dashboard/register-contest">Submitted Contest</NavLink>
                 </li>
               </>
             )}

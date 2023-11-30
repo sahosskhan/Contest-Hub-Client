@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import Swal from "sweetalert2";
-import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 const ManageUser = () => {
   const axiosSecure = useAxiosSecure();
@@ -68,10 +68,10 @@ const ManageUser = () => {
       </div>
       <div>
         <div className="overflow-x-auto">
-          <table className="table table-zebra">
+          <table className="table">
             {/* head */}
             <thead>
-              <tr>
+              <tr className="text-xl">
                 <th></th>
                 <th>Image</th>
                 <th>Name</th>
@@ -82,7 +82,7 @@ const ManageUser = () => {
             <tbody>
               {/* row 1 */}
               {users.map((user, index) => (
-                <tr key={user._id}>
+                <tr className="text-xl" key={user._id}>
                   <th>{index + 1}</th>
                   <td>
                     <div className="w-12 h-12 ">

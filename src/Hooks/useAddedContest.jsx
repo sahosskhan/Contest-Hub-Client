@@ -3,8 +3,8 @@ import useAxiosPublic from "./useAxiosPublic";
 
 const useAddedContest = () => {
 const axiosPublic = useAxiosPublic();
-const { data: addedContest = [], refetch} = useQuery({ 
-    queryKey: ['upload'],
+const { data: addedContest = [], isLoading, refetch} = useQuery({ 
+    queryKey: ['contest'],
     queryFn: async() => {
         const res = await axiosPublic.get('/added-contest');
         return res.data;
@@ -14,6 +14,6 @@ const { data: addedContest = [], refetch} = useQuery({
 })
 
 
-return {addedContest, refetch} ;
+return {addedContest, refetch,isLoading} ;
 };
 export default useAddedContest;

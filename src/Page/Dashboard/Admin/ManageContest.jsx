@@ -38,7 +38,7 @@ const handleDelete = (id) => {
   }).then((result) => {
     if (result.isConfirmed) {
       fetch(
-        `http://localhost:5000/contest-delete/${id}`,
+        `https://contest-hub-server-beige.vercel.app/contest-delete/${id}`,
         {
           method: "DELETE",
         }
@@ -61,10 +61,10 @@ const handleDelete = (id) => {
   return (
     <div>
       <div className="overflow-x-auto">
-        <table className="table table-zebra w-[1000px]">
+        <table className="table">
           <thead>
-            <tr className="text-base  text-red-500 ">
-              <td>Name</td>
+            <tr className="text-xl  text-red-500 ">
+              <td>Contest Name</td>
               <td>Tags</td>
               <td>Price</td>
               <td>Deadline</td>
@@ -72,6 +72,7 @@ const handleDelete = (id) => {
               <td>Status</td>
             </tr>
           </thead>
+          <tbody>
           {addedContest?.map((items) => (
             <ManageSingleContest
               key={items}
@@ -80,6 +81,7 @@ const handleDelete = (id) => {
               MakeApprove={MakeApprove}
             ></ManageSingleContest>
           ))}
+           </tbody>
         </table>
       </div>
     </div>

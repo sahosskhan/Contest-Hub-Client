@@ -1,9 +1,11 @@
 import { useForm } from "react-hook-form";
 import useAuth from "../../../Hooks/useAuth";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 
 const AddContest = () => {
+  const navigate = useNavigate();
 const {user}=useAuth();
     const {
         register,
@@ -13,7 +15,10 @@ const {user}=useAuth();
       const creatorEmail = user?.email;
       const creatorImage = user?.photoURL;
       const status = "pending";
-      const pcount ="0";
+      const pcount = 0;
+      const winnerImage ="null";
+      const winnerName ="null";
+      const winingStatus="pending";
       const onSubmit = (data) => {
         console.log(data);
 const nameContest = data.name;
@@ -35,12 +40,12 @@ reset({
   submission:""
 });
 const ContestAdd =
-{creatorName, creatorEmail,creatorImage,status,pcount, nameContest,price,money,imageContest,tags,deadline,description, submission } || {};
+{creatorName, winnerImage,winnerName,winingStatus, creatorEmail,creatorImage,status,pcount, nameContest,price,money,imageContest,tags,deadline,description, submission } || {};
 console.log(ContestAdd);
 
 
 fetch(
-    "http://localhost:5000/add-contest",
+    "https://contest-hub-server-beige.vercel.app/add-contest",
     {
       method: "POST",
       headers: {
@@ -58,6 +63,10 @@ fetch(
           text: "Your Post Upload Done ",
           icon: "success",
           confirmButtonText: "Done",
+        }).then((result) => {
+          if (result.isConfirmed) { 
+            navigate('/dashboard/added-contest'); 
+          }
         });
       }
     });

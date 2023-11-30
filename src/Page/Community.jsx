@@ -11,7 +11,7 @@ const Community = () => {
     // const [Upload, setUpload] = useState([]);
     // useEffect(() => {
     //     fetch(
-    //       `http://localhost:5000/community-post`
+    //       `https://contest-hub-server-beige.vercel.app/community-post`
     //     )
     //       .then((res) => res.json())
     //       .then((data) => setUpload(data));

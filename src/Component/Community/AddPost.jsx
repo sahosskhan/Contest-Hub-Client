@@ -45,7 +45,7 @@ const {
 
 
   fetch(
-    "http://localhost:5000/add-community-post",
+    "https://contest-hub-server-beige.vercel.app/add-community-post",
     {
       method: "POST",
       headers: {

@@ -4,7 +4,17 @@ import 'react-tabs/style/react-tabs.css';
 import ContesTab from "./ContesTab";
 
 const AllContest = () => {
-    const {addedContest}= useAddedContest();
+    const {addedContest, isLoading}= useAddedContest();
+
+    if(isLoading){
+      return <div>
+<span className="loading loading-ball loading-xs"></span>
+<span className="loading loading-ball loading-sm"></span>
+<span className="loading loading-ball loading-md"></span>
+<span className="loading loading-ball loading-lg"></span>
+
+      </div>
+    }
     console.log(addedContest);
     const addedFilterContest = addedContest.filter(item => item.status === 'approved');
     const Business = addedFilterContest.filter(item => item.tags === 'Business');

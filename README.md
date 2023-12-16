@@ -4,9 +4,9 @@
 ## Contest Creation Platform / Website
 
 ## Source Code:
-## [ Client Side Code](https://github.com/programming-hero-web-course1/b8a12-client-side-MuhammadSahossKhan)
+## [ Client Side Code](https://github.com/sahosskhan/Contest-Hub-Client)
 
-## [ Server Side Code](https://github.com/programming-hero-web-course1/b8a12-server-side-MuhammadSahossKhan)
+## [ Server Side Code](https://github.com/sahosskhan/Contest-Hub-Server)
 ## Preview: 
 ## [ Client Side Preview](https://contest-hub-bd.web.app/)
 
